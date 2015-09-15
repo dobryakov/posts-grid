@@ -22,5 +22,10 @@ module Facegrid
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    config.web_console.whitelisted_ips = ENV['DEBUG_ALLOW_IP'] if Rails.env.development?
+
+    config.time_zone = 'UTC'
+
   end
 end
