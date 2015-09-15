@@ -4,6 +4,11 @@ Rails.application.routes.draw do
     get 'omniauth_callbacks/facebook'
   end
 
+  namespace :api do
+    get  'updates', :to => 'updates#verify'
+    post 'updates', :to => 'updates#receive'
+  end
+
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
   resources :users, :only => [:index, :destroy]

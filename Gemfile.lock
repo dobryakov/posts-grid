@@ -84,6 +84,10 @@ GEM
       thor (>= 0.14, < 2.0)
     json (1.8.3)
     jwt (1.5.1)
+    koala (2.2.0)
+      addressable
+      faraday
+      multi_json
     le (2.6.2)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
@@ -200,6 +204,7 @@ DEPENDENCIES
   dotenv-rails
   jbuilder (~> 2.0)
   jquery-rails
+  koala (~> 2.2)
   le
   omniauth
   omniauth-facebook

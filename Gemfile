@@ -65,3 +65,6 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 
 gem 'puma'
+
+# https://github.com/arsduo/koala
+gem "koala", "~> 2.2"
