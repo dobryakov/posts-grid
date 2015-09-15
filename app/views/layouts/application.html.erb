@@ -31,6 +31,8 @@
 
     <% if !user_signed_in? %>
        <%= link_to 'Sign in with Facebook', user_omniauth_authorize_path(:facebook), :class => 'btn btn-success' %>
+    <% else %>
+      <%= link_to 'Logout', destroy_user_session_path, :method => "DELETE", :class => 'btn btn-default' %>
     <% end %>
 
 </div>
